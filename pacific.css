@@ -1,36 +1,29 @@
-/* 1. Universal Selector (1 property) */
 * {
     margin: 0;
 }
 
-/* 2. Body Selector (2 properties) */
 body {
     background-color: #FFFFFF;
     color: #333333;
 }
 
-/* 3. Header Selector (2 properties) */
 header {
     background-color: #000033;
     color: #FFFFFF;
 }
 
-/* 4. Nav Selector (1 property) */
 nav {
     background-color: #90CAF9;
 }
 
-/* 5. H2 Selector (1 property) */
 h2 {
     color: #0000CC;
 }
 
-/* 6. H3 Selector (1 property) */
 h3 {
     color: #000066;
 }
 
-/* 7. Contact Class Selector (1 property) */
 .contact {
     font-family: Arial, sans-serif;
 }
