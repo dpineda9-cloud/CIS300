@@ -1,37 +1,36 @@
-[cite_start]/* 1. Body Selector: Sets background and default text color [cite: 15, 59] */
+/* 1. Universal Selector (1 property) */
+* {
+    margin: 0;
+}
+
+/* 2. Body Selector (2 properties) */
 body {
     background-color: #FFFFFF;
     color: #333333;
 }
 
-[cite_start]/* 2. Header Selector: Configures header colors and removes white space [cite: 11, 28] */
+/* 3. Header Selector (2 properties) */
 header {
     background-color: #000033;
     color: #FFFFFF;
-    margin-bottom: 0;
 }
 
-[cite_start]/* 3. Navigation Selector: Sets background color [cite: 26] */
+/* 4. Nav Selector (1 property) */
 nav {
     background-color: #90CAF9;
 }
 
-[cite_start]/* 4. H2 Selector: Styles specific headings in medium blue [cite: 17] */
+/* 5. H2 Selector (1 property) */
 h2 {
     color: #0000CC;
 }
 
-[cite_start]/* 5. H3 Selector: Styles yurt section headings in dark blue [cite: 17] */
+/* 6. H3 Selector (1 property) */
 h3 {
     color: #000066;
 }
 
-[cite_start]/* 6. Class Selector for Company Name: Medium dark blue [cite: 21, 25] */
-.resort {
-    color: #003366;
-}
-
-[cite_start]/* 7. Class Selector for Contact Div [cite: 20, 24] */
+/* 7. Contact Class Selector (1 property) */
 .contact {
     font-family: Arial, sans-serif;
 }
