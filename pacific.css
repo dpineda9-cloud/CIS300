@@ -1,29 +1,28 @@
-* {
-    margin: 0;
+header { 
+  background-color: #000033;
+  color: #FFFFFF;
 }
 
-body {
-    background-color: #FFFFFF;
-    color: #333333;
+h1 { 
+  margin-bottom: 0;
 }
 
-header {
-    background-color: #000033;
-    color: #FFFFFF;
+nav { 
+  font-weight: bold;
+  background-color: #CCCCFF;
 }
 
-nav {
-    background-color: #90CAF9;
+footer { 
+  font-size: .70em;
+  font-style: italic;
+  text-align: center;
 }
 
-h2 {
-    color: #0000CC;
+.resort { 
+  color: #000033;
+  font-weight: bold;
 }
 
-h3 {
-    color: #000066;
-}
-
-.contact {
-    font-family: Arial, sans-serif;
+#contact { 
+  font-size: 0.90em;
 }
