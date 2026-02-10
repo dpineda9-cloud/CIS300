@@ -1,96 +1,142 @@
-
+* {
+    box-sizing: border-box;
+}
 body {
     background-color: #FFFFFF;
     color: #666666;
-    font-family: Arial, Helvetica, sans-serif;
-    /* Rubric: Linear gradient color */
-    background-image: linear-gradient(to bottom, #FFFFFF, #90C7E3);
+    font-family: Verdana, Arial, sans-serif;
+    margin: 0;
 }
-
-/* Rubric: Centered Wrapper */
 #wrapper {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
     background-color: #FFFFFF;
-    min-width: 960px;
-    box-shadow: 3px 3px 3px #333333;
+    width: 100%;
+    margin: 0;
 }
-
 header {
-    background-color: #002171;
+    background-color: #000033;
     color: #FFFFFF;
-    /* Reusing homehero.jpg as the fourth image for the header */
-    background-image: url(homehero.jpg);
-    background-repeat: no-repeat;
+    background-image: url(sunset.jpg);
     background-position: right;
-    height: 120px;
-    padding-top: 30px;
-    text-align: center;
-}
-
-h1 {
-    margin-top: 0; /* Rubric requirement */
-    margin-bottom: 0;
-}
-
-nav {
-    background-color: #BBDEFB;
-    font-weight: bold;
+    background-repeat: no-repeat;
+    background-size: contain; 
     padding: 1em;
     text-align: center;
 }
-
-nav a {
-    text-decoration: none; /* Rubric: No underline */
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+header a {
+    text-decoration: none;
+    color: #FFFFFF;
 }
-
+header a:hover {
+    color: #90C7E3;
+}
+h1 {
+    margin: 0;
+    font-size: 2em;
+    letter-spacing: 0.25em;
+}
+nav {
+    font-weight: bold;
+    padding: 0;
+    text-align: center;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    border-bottom: 1px solid #000033;
+}
+nav a {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    color: #000033;
+}
+nav a:visited {
+    color: #344873;
+}
+nav a:hover {
+    color: #A52A2A;
+}
+#homehero, #yurthero, #trailhero {
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#homehero { background-image: url(coast.jpg); }
+#yurthero { background-image: url(yurt.jpg); }
+#trailhero { background-image: url(trail.jpg); }
 main {
-    padding: 1px 20px 20px 20px; /* Rubric: Specific padding */
+    padding: 1em;
     display: block;
 }
-
-h2, h3 {
-    color: #1976D2;
-    text-shadow: 1px 1px 1px #CCCCCC; /* Rubric: Text shadow */
+h2 {
+    color: #3399CC;
 }
-
-/* Hero Section Styles */
-#homehero {
-    height: 300px;
-    background-image: url(homehero.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+h3 {
+    color: #000033;
 }
-
-#yurthero {
-    height: 300px;
-    background-image: url(yurthero.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+dt {
+    color: #000033;
+    font-weight: bold;
 }
-
-#trailhero {
-    height: 300px;
-    background-image: url(trailhero.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-
-#contact {
-    font-size: 90%;
-}
-
 footer {
-    font-size: 70%;
+    font-size: 0.75em;
     font-style: italic;
     text-align: center;
-    padding: 2em;
+    padding: 1em;
+    background-color: #FFFFFF;
 }
-
-.resort {
-    color: #002171;
-    font-weight: bold;
+@media (min-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
+    nav li {
+        border-bottom: none;
+    }
+    nav {
+        padding: 0.5em 0; 
+    }
+    section {
+        padding-bottom: 1em;
+    }
+}
+@media (min-width: 1024px) {
+    #wrapper {
+        background-color: #90C7E3; 
+        width: 80%;
+        margin: 0 auto;
+        border: 1px solid #000033;
+        box-shadow: 3px 3px 3px #333333;
+        display: grid;
+        grid-template-columns: 180px auto;
+        grid-template-areas:
+            "header header"
+            "nav hero"
+            "nav main"
+            ". footer";
+    }
+    header { grid-area: header; }
+    nav    { grid-area: nav; text-align: left; padding-left: 1em; }
+    main   { grid-area: main; background-color: #FFFFFF; }
+    #homehero, #yurthero, #trailhero { 
+        grid-area: hero; 
+        margin: 0;
+    }
+    footer {
+        grid-area: footer;
+        background-color: #FFFFFF;
+        padding: 10px;
+        margin: 0;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+    nav li {
+        padding: 0.5em 0;
+    }
 }
