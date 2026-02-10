@@ -64,9 +64,9 @@ nav a:hover {
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-#homehero { background-image: url(coast.jpg); }
-#yurthero { background-image: url(yurt.jpg); }
-#trailhero { background-image: url(trail.jpg); }
+#homehero { background-image: url(homehero.jpg); }
+#yurthero { background-image: url(yurthero.jpg); }
+#trailhero { background-image: url(trailhero.jpg); }
 main {
     padding: 1em;
     display: block;
