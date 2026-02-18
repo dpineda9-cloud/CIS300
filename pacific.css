@@ -1,283 +1,221 @@
- {
-
+* {
     box-sizing: border-box;
-
 }
 
 body {
-
     background-color: #FFFFFF;
-
     color: #666666;
-
     font-family: Verdana, Arial, sans-serif;
-
     margin: 0;
-
 }
 
 #wrapper {
-
     background-color: #FFFFFF;
-
     width: 100%;
-
     margin: 0;
-
 }
 
 header {
-
     background-color: #000033;
-
     color: #FFFFFF;
-
     background-image: url(sunset.jpg);
-
     background-position: right;
-
     background-repeat: no-repeat;
-
     background-size: contain; 
-
     padding: 1em;
-
     text-align: center;
-
 }
 
 header a {
-
     text-decoration: none;
-
     color: #FFFFFF;
-
 }
 
 header a:hover {
-
     color: #90C7E3;
-
 }
 
 h1 {
-
     margin: 0;
-
     font-size: 2em;
-
     letter-spacing: 0.25em;
-
 }
 
 nav {
-
     font-weight: bold;
-
     padding: 0;
-
     text-align: center;
-
 }
 
 nav ul {
-
     list-style-type: none;
-
     margin: 0;
-
     padding: 0;
-
 }
 
 nav li {
-
     border-bottom: 1px solid #000033;
-
 }
 
 nav a {
-
     display: block;
-
     padding: 1em;
-
     text-decoration: none;
-
     color: #000033;
-
 }
 
 nav a:visited {
-
     color: #344873;
-
 }
 
 nav a:hover {
-
     color: #A52A2A;
-
 }
 
 #homehero, #yurthero, #trailhero {
-
     height: 300px;
-
     background-repeat: no-repeat;
-
     background-size: 100% 100%;
-
 }
 
 #homehero { background-image: url(homehero.jpg); }
-
 #yurthero { background-image: url(yurthero.jpg); }
-
 #trailhero { background-image: url(trailhero.jpg); }
 
 main {
-
     padding: 1em;
-
     display: block;
-
 }
 
 h2 {
-
     color: #3399CC;
-
 }
 
 h3 {
-
     color: #000033;
-
 }
 
-dt {
+/* Chapter 9 Table Styling */
+table {
+    border: 2px solid #3399CC;
+    border-collapse: collapse;
+    width: 90%;
+    margin: 1em auto;
+}
 
-    color: #000033;
+td, th {
+    padding: 0.5em;
+    border: 1px solid #3399CC;
+    text-align: center;
+}
 
-    font-weight: bold;
+/* Align Description column to the left */
+td:nth-of-type(2) {
+    text-align: left;
+}
 
+/* Zebra Striping */
+tr:nth-of-type(odd) {
+    background-color: #F5F5F5;
+}
+
+th {
+    background-color: #3399CC;
+    color: #FFFFFF;
+}
+
+/* Chapter 10 Form Styling */
+form {
+    display: grid;
+    grid-gap: 1em;
+    padding: 1em;
+}
+
+label {
+    display: block;
+}
+
+input[type="submit"] {
+    background-color: transparent; /* Required: no background color */
+    width: fit-content;
+    padding: 0.5em 1em;
 }
 
 footer {
-
     font-size: 0.75em;
-
     font-style: italic;
-
     text-align: center;
-
     padding: 1em;
-
     background-color: #FFFFFF;
-
 }
 
+/* Media Queries - Keep at the bottom */
 @media (min-width: 600px) {
-
     nav ul {
-
         display: flex;
-
         flex-flow: row nowrap;
-
         justify-content: space-around;
-
     }
 
     nav li {
-
         border-bottom: none;
-
     }
 
     nav {
-
         padding: 0.5em 0; 
-
     }
 
     section {
-
         padding-bottom: 1em;
-
     }
 
+    /* Form Layout for Tablet/Desktop */
+    form {
+        grid-template-columns: 10em 20em;
+    }
+
+    input[type="submit"] {
+        grid-column: 2;
+    }
 }
 
 @media (min-width: 1024px) {
-
     #wrapper {
-
         background-color: #90C7E3; 
-
         width: 80%;
-
         margin: 0 auto;
-
         border: 1px solid #000033;
-
         box-shadow: 3px 3px 3px #333333;
-
         display: grid;
-
         grid-template-columns: 180px auto;
-
         grid-template-areas:
-
             "header header"
-
             "nav hero"
-
             "nav main"
-
             ". footer";
-
     }
 
     header { grid-area: header; }
-
     nav    { grid-area: nav; text-align: left; padding-left: 1em; }
-
     main   { grid-area: main; background-color: #FFFFFF; }
-
     #homehero, #yurthero, #trailhero { 
-
         grid-area: hero; 
-
         margin: 0;
-
     }
 
     footer {
-
         grid-area: footer;
-
         background-color: #FFFFFF;
-
         padding: 10px;
-
         margin: 0;
-
     }
 
     nav ul {
-
         display: flex;
-
         flex-direction: column;
-
     }
 
     nav li {
-
         padding: 0.5em 0;
-
     }
-
 }
